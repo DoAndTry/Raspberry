@@ -153,7 +153,7 @@ void* generateSnd(void *arg)
 	}  
 	
 	// 配置声卡，和发送进程的声卡配置一致
-	snd_pcm_hw_params_alloca(¶ms); 
+	snd_pcm_hw_params_alloca(&params); 
 	snd_pcm_hw_params_any(handle, params);  
 	snd_pcm_hw_params_set_access(handle, params,SND_PCM_ACCESS_RW_INTERLEAVED);
 	snd_pcm_hw_params_set_format(handle, params,SND_PCM_FORMAT_U8); 
